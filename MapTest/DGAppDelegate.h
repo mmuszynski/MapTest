@@ -1,9 +1,9 @@
 //
 //  DGAppDelegate.h
-//  MapTest
+//  MapTests
 //
-//  Created by Mike Muszynski on 7/15/12.
-//  Copyright (c) 2012 Mike Muszynski. All rights reserved.
+//  Created by Mike Muszynski on 7/14/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

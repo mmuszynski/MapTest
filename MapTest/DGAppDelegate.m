@@ -1,19 +1,30 @@
 //
 //  DGAppDelegate.m
-//  MapTest
+//  MapTests
 //
-//  Created by Mike Muszynski on 7/15/12.
-//  Copyright (c) 2012 Mike Muszynski. All rights reserved.
+//  Created by Mike Muszynski on 7/14/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "DGAppDelegate.h"
 
 #import "DGViewController.h"
+#define TESTING 1
+
 
 @implementation DGAppDelegate
 
+@synthesize window = _window;
+@synthesize viewController = _viewController;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    #ifdef TESTING
+    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+    #endif
+    
+    [TestFlight takeOff:@"f81050b5c84dfa0c12ed0161860e9eaf_MTA5NTQzMjAxMi0wNy0xMiAxMTo1NToxOS44NjUzNzc"];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[DGViewController alloc] initWithNibName:@"DGViewController" bundle:nil];
